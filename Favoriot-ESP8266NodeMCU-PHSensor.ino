@@ -3,8 +3,8 @@
 #include<Adafruit_GFX.h>
 #include<Adafruit_SSD1306.h>
 
-char ssid[] = "favoriot@unifibiz";      
-char pass[] = "fav0r10t2017";  
+char ssid[] = "xxxxx";      
+char pass[] = "xxxxx";  
 const String myDevice = "NodePHSens@dex2813"; 
 char server[] = "apiv2.favoriot.com";
 
