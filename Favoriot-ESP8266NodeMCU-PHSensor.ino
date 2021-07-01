@@ -6,7 +6,7 @@
 char ssid[] = "xxxxx";      
 char pass[] = "xxxxx";  
 const String device_developer_id = "deviceDefault@favoriot"; // change it!
-const apikey = "rw-apikey" // change it!
+const apikey = "rw-apikey/acesstoken" // change it!
 char server[] = "apiv2.favoriot.com";
 
 int status = WL_IDLE_STATUS;
