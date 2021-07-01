@@ -5,8 +5,8 @@
 
 char ssid[] = "xxxxx";      
 char pass[] = "xxxxx";  
-const String device_developer_id = "deviceDefault@favoriot";
-const apikey = "rw-apikey"
+const String device_developer_id = "deviceDefault@favoriot"; // change it!
+const apikey = "rw-apikey" // change it!
 char server[] = "apiv2.favoriot.com";
 
 int status = WL_IDLE_STATUS;
@@ -98,7 +98,7 @@ void loop() {
     client.println("POST /v2/streams HTTP/1.1");
     client.println("Host: apiv2.favoriot.com");
 
-    client.println(F("apikey:"+apikey));  // change it!
+    client.println(F("apikey:"+apikey));  
     
     client.println("Content-Type: application/json");
     client.println("cache-control: no-cache");
