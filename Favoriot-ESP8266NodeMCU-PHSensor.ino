@@ -5,7 +5,8 @@
 
 char ssid[] = "xxxxx";      
 char pass[] = "xxxxx";  
-const String myDevice = "NodePHSens@dex2813"; 
+const String device_developer_id = "deviceDefault@favoriot";
+const apikey = "rw-apikey"
 char server[] = "apiv2.favoriot.com";
 
 int status = WL_IDLE_STATUS;
@@ -91,13 +92,13 @@ void loop() {
   display.display();
 
   //=========================json favoriot data send ==================================================
-  String json = "{\"device_developer_id\":\""+myDevice+"\",\"data\":{\"PH Value:\":\""+phValue+"\"}}";
+  String json = "{\"device_developer_id\":\""+device_developer_id+"\",\"data\":{\"PH Value:\":\""+phValue+"\"}}";
   Serial.println(json);
   if (client.connect(server, 80)) {
     client.println("POST /v2/streams HTTP/1.1");
     client.println("Host: apiv2.favoriot.com");
 
-    client.println(F("apikey:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRleDI4MTMiLCJyZWFkX3dyaXRlIjp0cnVlLCJpYXQiOjE1ODM4MjcyNjB9.CmQYQSH-rg1GHWOnJJx9yj3z9hAr_ZPL1xg0AA3XIz8"));  // change it!
+    client.println(F("apikey:"+apikey));  // change it!
     
     client.println("Content-Type: application/json");
     client.println("cache-control: no-cache");
